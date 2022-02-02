@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Collapse Example</title>
+</head>
+<body>
+  <div class="w-full h-screen flex items-center justify-center flex-col bg-gray-200 gap-4">
+    <div class="w-52 h-24 rounded shadow bg-white flex items-center justify-center" id="container">
+      <h1 class="text-2xl font-bold">Container</h1>
+    </div>
+    <button class="w-52 h-12 bg-black text-white bg-blue-800 rounded shadow hover:bg-blue-700 hover:shadow-md" id="button">
+      Collapse
+    </button>
+  </div>
+  <script>
+    let BooleanVariable = true
+    document.getElementById('button').onclick =  ()=>{
+      if(BooleanVariable){
+        document.getElementById("container").style.display = "none"
+        BooleanVariable = false
+      }else{
+        document.getElementById("container").style.display = "flex"
+        BooleanVariable = true
+      }
+    }
+  </script>
+</body>
+</html>
